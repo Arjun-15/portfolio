@@ -16,10 +16,10 @@ function App() {
       <Provider store={store}>
         
         <Routes >
-          <Route path="/The-Arjun-Sharma/" element={<><CryptoNavbar /><CryptoList /></>} />
-          <Route path="/The-Arjun-Sharma/detail/:coinId" element={<><CryptoNavbar /><CoinDetail /></>} />
-          <Route path="/The-Arjun-Sharma/me" element={<ThemeProvider><Home/></ThemeProvider>} />
-          <Route path="/The-Arjun-Sharma/cal" element={<><Calculator/></>} />
+          <Route path="/portfolio" element={<ThemeProvider><Home/></ThemeProvider>} />
+          <Route path="/portfolio/coin" element={<><CryptoNavbar /><CryptoList /></>} />
+          <Route path="/portfolio/detail/:coinId" element={<><CryptoNavbar /><CoinDetail /></>} />
+          <Route path="/portfolio/cal" element={<><Calculator/></>} />
           {/* Add more routes here if needed */}
         </Routes>
       </Provider>
