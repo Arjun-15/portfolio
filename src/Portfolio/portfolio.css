@@ -1,0 +1,99 @@
+/* custom.css */
+
+.banner-container {
+  background-size: cover;
+  height: 100vh;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: left;
+}
+
+.banner-title {
+  font-weight: 800;
+}
+
+.banner-subtitle {
+  font-weight: 600;
+  color: #007bff;
+}
+
+.banner-links img {
+  margin-right: 10px;
+}
+
+.banner-links a:hover {
+  transform: scale(1.25);
+  transition: transform 0.3s ease;
+}
+
+.resume-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+.styles_typicalWrapper::after {
+  content: "|";
+  animation: styles_blink__2CKyC 1s infinite step-start;
+}
+
+@keyframes styles_blink__2CKyC {
+  50% { opacity: 0; }
+}
+
+body {
+  padding-top: 56px; /* Adjust this based on your navbar's height */
+}
+
+.banner, .about, .skills, .service, .project, .contact {
+  min-height: 100vh; /* Ensures each section takes at least the full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner { background-color: #f8f9fa; }
+.about { background-color: #e9ecef; }
+.skills { background-color: #f8f9fa; }
+.service { background-color: #e9ecef; }
+.project { background-color: #f8f9fa; }
+.contact { background-color: #e9ecef; }
+
+.skill-card {
+  opacity: 0.9;
+}
+
+.skill-card.animate {
+  animation: skill-card-transform 1s ease-in-out;
+}
+
+@keyframes skill-card-transform {
+  0% { transform: translateY(80px) translateZ(0px); }
+  50% { transform: translateY(40px) translateZ(0px); }
+  100% { transform: translateY(0px) translateZ(0px); }
+}
+
+.service-card{
+  opacity: 0.9;
+  animation: service-card-animate 1s ease-in-out;
+}
+
+@keyframes service-card-animate {
+  0% { transform: scale(0) translateZ(0px); }
+  100% { transform: scale(1) translateZ(0px); }
+}
