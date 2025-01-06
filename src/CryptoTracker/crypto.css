@@ -1,0 +1,51 @@
+.nav-home{
+    width: 3rem;
+    margin: 0 1rem;
+}
+
+.search-container {
+    position: relative;
+  }
+  
+  .popover-content {
+    max-height: 60vh; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  .popover-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .popover-content li {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .popover-content li:hover {
+    background-color: #f1f1f1;
+  }
+  .button-container{
+    margin: 10px;
+  }
+  
+  .key {
+    font-weight: 700;
+    float:left;
+  }
+  
+  .key i {
+    margin-right: .3rem
+  }
+  
+  .value {
+    font-weight: 700;
+    float: right;
+  }
+  .text-left{
+    text-align: left;
+  }
+  .text-right{
+    text-align: right;
+  }

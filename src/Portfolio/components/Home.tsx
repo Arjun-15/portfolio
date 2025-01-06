@@ -3,7 +3,7 @@ import { NavbarMe } from "./Navbar";
 import { About } from "./About";
 import { Skills } from "./Skills";
 import { Service } from "./Service";
-import { Projects } from "./Project";
+import { MyProjects } from "./Project";
 import { Contact } from "./Contact";
 
 export const Home = () => {
@@ -16,7 +16,7 @@ export const Home = () => {
         <About />
         <Skills skills={skills} />
         <Service services={services} />
-        <Projects projects={projects} />
+        <MyProjects/>
         <Contact />
       </div>
     </div>
@@ -84,32 +84,7 @@ const skills = [
     img: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
   },
 ];
-const projects = [
-  {
-    image:
-      "https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-web-development-coding-kiranshastry-lineal-color-kiranshastry.png",
-    title: "Web Application Development",
-    description:
-      "Designed and developed a full-stack web application using React for the frontend and Node.js for the backend. Implemented RESTful APIs for seamless data exchange and integrated user authentication using JWT. Deployed the application on AWS, ensuring scalability and high availability.",
-    technologies: "React, Node.js, Express, MongoDB, AWS",
-  },
-  {
-    image:
-      "https://img.icons8.com/external-justicon-lineal-color-justicon/64/000000/external-app-development-responsive-web-design-justicon-lineal-color-justicon.png",
-    title: "Mobile Application Development",
-    description:
-      "Created a cross-platform mobile application using React Native. Developed features such as real-time messaging, geolocation services, and push notifications. Utilized Firebase for backend services including database management, authentication, and cloud storage.",
-    technologies: "React Native, Firebase, Redux, Google Maps API",
-  },
-  {
-    image:
-      "https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-backend-no-code-flaticons-flat-flat-icons.png",
-    title: "E-commerce Platform",
-    description:
-      "Built a comprehensive e-commerce platform with a user-friendly interface and secure payment gateway integration. Implemented features like product listing, shopping cart, order tracking, and user reviews. Optimized the platform for performance and SEO to enhance user experience and search engine ranking.",
-    technologies: "Angular, Node.js, Express, MySQL, Stripe API",
-  },
-];
+
 const services = [
   {
     title: "Full-Stack Web Development",

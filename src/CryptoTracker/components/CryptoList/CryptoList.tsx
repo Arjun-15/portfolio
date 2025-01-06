@@ -3,14 +3,15 @@ import Table from "react-bootstrap/Table";
 import { useDispatch, useSelector } from "react-redux";
 import { ThunkDispatch } from "redux-thunk";
 import { AnyAction } from "redux";
-import { coinsSelector, fetchInitial } from "../../redux/reducers/cryptoReducer";
+import { coinsActions, coinsSelector, fetchInitial } from "../../../redux/reducers/cryptoReducer";
 import { Pagination } from "../Pagination/Pagination";
+import { Link } from "react-router-dom";
 
 // Define the type for your thunk actions
 type AppDispatch = ThunkDispatch<any, any, AnyAction>;
 
 export const CryptoList = () => {
-  const { coins } = useSelector(coinsSelector);
+  const { coins,favouriteCoin } = useSelector(coinsSelector);
   const dispatch: AppDispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 25; // Set your items per page
@@ -50,7 +51,10 @@ export const CryptoList = () => {
     if (sortConfig.key !== key) return null;
     return sortConfig.direction === "asc" ? <i className="fas fa-arrow-up"></i> : <i className="fas fa-arrow-down"></i>;
   };
-
+ const handleFavourite = (id:any) => {
+  dispatch(coinsActions.toggleFavourite(id));
+  // console.log(id)
+ }
   return (
     <>
       <Table responsive>
@@ -91,12 +95,12 @@ export const CryptoList = () => {
                     }}
                   />
                 </td>
-                <td>{coin.name}</td>
+                <td><Link to={`detail/${coin.id}`}>{coin.name}</Link></td>
                 <td>{coin.price_change_24h}</td>
                 <td>{coin.total_volume}</td>
                 <td>{coin.market_cap}</td>
                 <td>
-                  <i className={coin.favorite ? "fas fa-star" : "far fa-star"}></i>
+                  <i className={favouriteCoin.includes(coin.id) ? "fas fa-star" : "far fa-star"} onClick={()=>handleFavourite(coin.id)}></i>
                 </td>
               </tr>
             ))}
