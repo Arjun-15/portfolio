@@ -13,9 +13,9 @@ const PortfolioSlice = createSlice({
     name: 'portfolio',
     initialState: InitialState,
     reducers: {
-        addProjects: (state: any, action: any) => {
-            //
-        }
+        // addProjects: (state: any, action: any) => {
+        //     //
+        // }
     },
     extraReducers(builder) {
         builder.addCase(fetchProjects.fulfilled, (state: any, action: any) => {

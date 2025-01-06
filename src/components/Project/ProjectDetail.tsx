@@ -47,12 +47,12 @@ export const ProjectDetail = () => {
         <h2 className="text-center">Variables and Elaboration</h2>
         {project.VariablesAndElaborations &&
           project.VariablesAndElaborations.map((entity: any, index: number) => (
-            <>
+            <div key={index}>
               <CodeSnippet title={entity.title} data={entity.desc} />
               <p>
                 <b>Explanation</b> : {entity.Explanation}
               </p>
-            </>
+            </div>
           ))}
           <div>...</div>
       </Container>

@@ -49,11 +49,9 @@ export const fetchCoinChartData = createAsyncThunk('coins/fetchCoinChartData', a
 // New Combined Thunk
 export const fetchCoinDetails = createAsyncThunk(
     'coins/fetchCoinDetails',
-    async ({ coinId, day }: { coinId: string; day: number }, { dispatch }) => {
+    async ({ coinId }: { coinId: string }, { dispatch }) => {
         // Fetch Coin Details
         const coinDetails = await dispatch(filterCoinbyId(coinId)).unwrap();
-        // Fetch Coin Chart Data
-        // const chartData = await dispatch(fetchCoinChartData({ coinId, day })).unwrap();
         // Return combined data
         return { coinDetails };
     }

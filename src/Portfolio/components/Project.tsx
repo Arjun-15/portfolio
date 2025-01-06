@@ -4,17 +4,10 @@ import { useThemeContext } from "../../context/portfolioContext/portfolioContext
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchProjects,
-  portfolioActions,
   portfolioSelector,
 } from "../../redux/reducers/portfolioReducer";
 import { AnyAction, ThunkDispatch } from "@reduxjs/toolkit";
 import { Link } from "react-router-dom";
-
-interface Project {
-  image: string;
-  title: string;
-  description: string;
-}
 
 export const MyProjects: React.FC = () => {
   const { projects } = useSelector(portfolioSelector);

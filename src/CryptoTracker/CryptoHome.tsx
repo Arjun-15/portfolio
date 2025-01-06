@@ -6,7 +6,7 @@ import { CryptoNavbar } from './components/Navbar/Navbar';
 import { CryptoList } from './components/CryptoList/CryptoList';
 import './crypto.css';
 
-export const CryptoHome = () => {
+export const CryptoHome:React.FC = () => {
   return (
     <>
       <CryptoNavbar />
