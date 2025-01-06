@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { ThunkDispatch } from "redux-thunk";
 import { AnyAction } from "redux";
 import {
-  coinsActions,
   coinsSelector,
   fetchInitial,
 } from "../../../redux/reducers/cryptoReducer";

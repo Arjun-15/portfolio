@@ -18,10 +18,10 @@ export const CoinDetail = () => {
   const { coin, favouriteCoin } = useSelector(coinsSelector);
 
   useEffect(() => {
-    if (coinId && day) {
-      dispatch(fetchCoinDetails({ coinId, day }));
+    if (coinId) {
+      dispatch(fetchCoinDetails({ coinId }));
     }
-  }, [coinId, day]);
+  }, [coinId]);
 
   if (
     !coin ||
